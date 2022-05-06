@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="2718e101-2045-4d06-a80b-701e094b3971" created="3.30.0" activeEnvironment="Default environment" name="Project 2" resourceRoot="" updated="3.30.0 2022-03-16T13:04:41Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="13715cc3-1282-418f-9437-43e51c345e9e" name="https://petstore.swagger.io" type="rest_ex" wadlVersion="https://swagger.io/openapiv3/specification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="https://petstore.swagger.io.json">
+      <con:part>
+        <con:url>https://petstore.swagger.io.json</con:url>
+        <con:content>{"openapi":"3.0.1","info":{"title":"https://petstore.swagger.io","version":"1.0.0"},"servers":[{"url":"/"}],"paths":{"/v2/user":{"description":"","post":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n  \"username\": \"testuser1\",\n  \"firstName\": \"testfn\",\n  \"lastName\": \"testln\",\n  \"email\": \"testuser@gmail.com\",\n  \"password\": \"Passw0rd\",\n  \"phone\": \"9632587410\",\n  \"userStatus\": 0\n}"}}},"responses":{"default":{"description":"Default response"}}}},"/v2/user/{username}":{"description":"","put":{"description":"","requestBody":{"content":{"application/json":{"example":"{\n  \"username\": \"testuserone\",\n  \"firstName\": \"testfn\",\n  \"lastName\": \"testln\",\n  \"email\": \"testuser@gmail.com\",\n  \"password\": \"Passw0rd\",\n  \"phone\": \"9632587410\",\n  \"userStatus\": 0\n}"}}},"responses":{"default":{"description":"Default response"}}},"delete":{"description":"","requestBody":{"content":{"application/json":{}}},"responses":{"default":{"description":"Default response"}}},"parameters":[{"name":"username","in":"path","required":true}]},"/v2/user/login":{"description":"","get":{"description":"","parameters":[{"name":"username","in":"query","required":true,"schema":{"type":"string"}},{"name":"password","in":"query","required":true,"schema":{"type":"string"}}],"responses":{"default":{"description":"Default response"}}}},"/v2/user/logout":{"description":"","get":{"description":"","responses":{"default":{"description":"Default response"}}}}}}</con:content>
+        <con:type>https://swagger.io/openapiv3/specification</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>https://petstore.swagger.io</con:endpoint>
+    </con:endpoints>
+    <con:resource name="user" path="/v2/user" id="f65d74f9-7de1-4a26-ba26-4d69d420bdc6">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="{username}" path="{username}" id="e68589d2-96e9-47c2-9427-7a912f5b39de">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>username</con:name>
+            <con:value>username</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>username</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:method name="Method 1" id="d9586a7f-c2a7-4216-8c0f-9a96dfe01d25" method="PUT">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="Request 1" id="d3e2701f-de39-470d-937e-49e3c3c15805" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request>{
+  "username": "testuserone",
+  "firstName": "testfn",
+  "lastName": "testln",
+  "email": "testuser@gmail.com",
+  "password": "Passw0rd",
+  "phone": "9632587410",
+  "userStatus": 0
+}</con:request>
+            <con:originalUri>https://petstore.swagger.io/v2/user/testuser</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="testuser1"/>
+            </con:parameters>
+          </con:request>
+        </con:method>
+        <con:method name="Method 2" id="f8f0f205-0e3b-4043-9c85-8b7ea8bcd2bc" method="DELETE">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="Request 1" id="e872d82d-98b4-4734-bc30-ea27e55360c7" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/testuserone</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="testuserone"/>
+            </con:parameters>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="login" path="login" id="1a0c749e-cc35-437c-874f-e2ab49227519">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="9b9149cb-ed25-40b9-a0a9-4576e5cabd6a" method="GET">
+          <con:settings/>
+          <con:parameters>
+            <con:parameter required="true">
+              <con:name>username</con:name>
+              <con:value/>
+              <con:style>QUERY</con:style>
+              <con:default/>
+            </con:parameter>
+            <con:parameter required="true">
+              <con:name>password</con:name>
+              <con:value/>
+              <con:style>QUERY</con:style>
+              <con:default/>
+            </con:parameter>
+          </con:parameters>
+          <con:request name="Request 1" id="0545df4d-789f-46bb-ae97-ea7ca93abe0d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="Passw0rd"/>
+              <con:entry key="username" value="testuserone"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="logout" path="logout" id="dbd7d851-e79c-4de1-99e8-0648716c6b0e">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="Method 1" id="f274420c-eb22-46e9-9106-0223b7a944ee" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:request name="Request 1" id="128dbc2b-8e2f-4167-b47d-5028aa5788ef" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/logout</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:method name="Method 1" id="cd53912e-70db-4dd8-b319-3de7200a40d8" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:request name="Request 1" id="f14f93c5-baf3-4d04-9a8c-143561c8d4c3" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://petstore.swagger.io</con:endpoint>
+          <con:request>{
+  "username": "testuser1",
+  "firstName": "testfn",
+  "lastName": "testln",
+  "email": "testuser@gmail.com",
+  "password": "Passw0rd",
+  "phone": "9632587410",
+  "userStatus": 0
+}</con:request>
+          <con:originalUri>https://petstore.swagger.io/v2/user</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="4761c03e-3ca0-43de-ab47-98b191469e79" name="TestSuite1">
+    <con:description>The test suite generated for the REST service [https://petstore.swagger.io]</con:description>
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="52470cbd-5cb7-4f9b-a02c-6f887691922c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="https://petstore.swagger.io Test Case" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:testStep type="datasource" name="DataSource" id="6857d851-98d1-4428-817f-4fdbb244c525">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>C:/Users/Hi/Desktop/Juhee/SDET/LoginData.xlsx</file>
+              <worksheet>Login</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>false</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>user_name</con:property>
+          <con:property>first_name</con:property>
+          <con:property>last_name</con:property>
+          <con:property>email</con:property>
+          <con:property>password</con:property>
+          <con:property>phone</con:property>
+          <con:property>updated_user_name</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="POST_CreateUser" id="bf6cf68d-f2f3-44bc-900a-2a8ce2aa93a0">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="POST_CreateUser" id="f14f93c5-baf3-4d04-9a8c-143561c8d4c3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request>{
+  "username": "${DataSource#user_name}",
+  "firstName": "${DataSource#first_name}",
+  "lastName": "${DataSource#last_name}",
+  "email": "${DataSource#email}",
+  "password": "${DataSource#password}",
+  "phone": "${DataSource#phone}",
+  "userStatus": 0
+}</con:request>
+            <con:originalUri>https://petstore.swagger.io/v2/user</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="b8eea1f7-7cb5-4959-a457-c7765c5587d7" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="PUT_ModifyUser" id="ccbe0f4b-1e2d-4087-b887-9f2a1939f1ac">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/{username}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="PUT_ModifyUser" id="d3e2701f-de39-470d-937e-49e3c3c15805" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request>{
+  "username": "${DataSource#updated_user_name}",
+  "firstName": "${DataSource#first_name}",
+  "lastName": "${DataSource#last_name}",
+  "email": "${DataSource#email}",
+  "password": "${DataSource#password}",
+  "phone": "${DataSource#phone}",
+  "userStatus": 0
+}</con:request>
+            <con:originalUri>https://petstore.swagger.io/v2/user/testuser</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="1ae500ad-4c96-4e41-b9be-d2970d87ad8e" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="${DataSource#user_name}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET_LoginUser" id="e6075686-2a37-450a-899c-9f369fdba450">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/login" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET_LoginUser" id="0545df4d-789f-46bb-ae97-ea7ca93abe0d" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/login</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="d815696c-2d63-4595-8f5e-e6031c2275ca" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="password" value="${DataSource#password}"/>
+              <con:entry key="username" value="${DataSource#updated_user_name}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>username</con:entry>
+              <con:entry>password</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET_LogoutUser" id="a4404fdf-0a8f-438a-b6b0-5fcec5ae888b">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/logout" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET_LogoutUser" id="128dbc2b-8e2f-4167-b47d-5028aa5788ef" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/logout</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="79ea6a6c-bcc6-4d2b-b192-2f3db58f3499" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="DELETE_DeleteUser" id="e91c6a01-8896-43aa-af3b-964cdf3c0d70">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/user/{username}" methodName="Method 2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="DELETE_DeleteUser" id="e872d82d-98b4-4734-bc30-ea27e55360c7" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/user/testuserone</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="be057cf6-63c7-4044-b12f-43b6b8bdfbb6" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <con:entry key="username" value="${DataSource#updated_user_name}"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="39ac3fb6-873f-4857-a003-2fcc0c10984f">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>C:/Users/Hi/Desktop/Juhee/SDET/LoginData.xlsx</outfile>
+              <worksheet>Login</worksheet>
+              <cell>H2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>post_resp</con:name>
+              <con:value>${POST_CreateUser#Response#$['code']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>put_resp</con:name>
+              <con:value>${PUT_ModifyUser#Response#$['code']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>get_login_resp</con:name>
+              <con:value>${GET_LoginUser#Response#$['code']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>get_logout_resp</con:name>
+              <con:value>${GET_LogoutUser#Response#$['code']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>delete_resp</con:name>
+              <con:value>${DELETE_DeleteUser#Response#$['code']}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSourceLoop" id="fe2d30da-7e42-4e42-af00-f04d452ce612">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>POST_CreateUser</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to ReadyAPI functional tests
+
+// If hardcoding the token, uncomment and change line 5
+// token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new java.io.FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new java.io.PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
